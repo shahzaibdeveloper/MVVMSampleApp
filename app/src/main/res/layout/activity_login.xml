@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    >
+    <data>
+        
+        <variable
+            name="viewmodel"
+            type="com.android.mvvmsampleapp.ui.auth.AuthViewModel" />
+
+    </data>
+
+
+<LinearLayout 
+   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.auth.LoginActivity">
+
+   <EditText
+       android:text="@={viewmodel.email}"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/email"
+       android:textAlignment="center"
+       android:hint="Email"/>
+
+    <EditText
+        android:text="@={viewmodel.password}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass"
+        android:textAlignment="center"
+        android:hint="Password"/>
+    <Button
+        android:onClick="@{viewmodel::OnLoginButtonClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:text="login"
+        />
+
+</LinearLayout>
+</layout>

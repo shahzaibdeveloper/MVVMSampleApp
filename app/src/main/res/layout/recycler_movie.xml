@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        
+        <variable
+            name="movie"
+            type="com.android.mvvmsampleapp.data1.model1.Movie" />
+        
+    </data>
+    
+    
+<RelativeLayout
+    
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <ImageView
+        app:imageurl="@{movie.imageurl}"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="matrix"/>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/t1"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@{movie.name}"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@{movie.publisher}"
+        android:layout_alignParentRight="true"
+        android:id="@+id/t2"
+        android:layout_below="@+id/img"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorAccent"
+        />
+    
+    
+
+</RelativeLayout>
+</layout>
